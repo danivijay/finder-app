@@ -1,6 +1,6 @@
 <template>
   <v-container fluid>
-    <v-layout>
+    <v-layout  row wrap>
       <v-flex xs12 class="mb-3">
         <v-card>
           <v-card-text>
@@ -16,8 +16,8 @@
         </v-card>
       </v-flex>
     </v-layout>
-    <v-layout>
-      <v-flex xs6 sm4 md3 class="pl-2">
+    <v-layout row wrap>
+      <v-flex xs6 sm4 md3 lg2 class="pl-2">
         <v-card>
           <v-card-media src="https://lh4.googleusercontent.com/-M6gI9NNnr0k/AAAAAAAAAAI/AAAAAAAAAB8/8quus1Eouio/photo.jpg" height="200px">
           </v-card-media>
@@ -33,7 +33,7 @@
           </v-card-actions>
         </v-card>
       </v-flex>
-      <v-flex xs6 sm4 md3 class="pl-2">
+      <v-flex xs6 sm4 md3 lg2 class="pl-2">
         <v-card>
           <v-card-media src="https://lh4.googleusercontent.com/-M6gI9NNnr0k/AAAAAAAAAAI/AAAAAAAAAB8/8quus1Eouio/photo.jpg" height="200px">
           </v-card-media>
@@ -49,7 +49,7 @@
           </v-card-actions>
         </v-card>
       </v-flex>
-      <v-flex xs6 sm4 md3 class="pl-2">
+      <v-flex xs6 sm4 md3 lg2 class="pl-2">
         <v-card>
           <v-card-media src="https://lh4.googleusercontent.com/-M6gI9NNnr0k/AAAAAAAAAAI/AAAAAAAAAB8/8quus1Eouio/photo.jpg" height="200px">
           </v-card-media>
