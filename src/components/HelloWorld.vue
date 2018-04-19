@@ -1,18 +1,71 @@
 <template>
   <v-container fluid>
-    <v-slide-y-transition mode="out-in">
-      <v-layout column align-center>
-        <img src="@/assets/logo.png" alt="Vuetify.js" class="mb-5">
-        <blockquote>
-          &#8220;First, solve the problem. Then, write the code.&#8221;
-          <footer>
-            <small>
-              <em>&mdash;John Johnson</em>
-            </small>
-          </footer>
-        </blockquote>
-      </v-layout>
-    </v-slide-y-transition>
+    <v-layout>
+      <v-flex xs12 class="mb-3">
+        <v-card>
+          <v-card-text>
+            <v-text-field
+              label="Search person"
+            ></v-text-field>
+          </v-card-text>
+          <v-card-actions>
+            <v-spacer></v-spacer>
+            <v-btn
+            >Search</v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-flex>
+    </v-layout>
+    <v-layout>
+      <v-flex xs6 sm4 md3 class="pl-2">
+        <v-card>
+          <v-card-media src="https://lh4.googleusercontent.com/-M6gI9NNnr0k/AAAAAAAAAAI/AAAAAAAAAB8/8quus1Eouio/photo.jpg" height="200px">
+          </v-card-media>
+          <v-card-title primary-title>
+            <div>
+              <h3 class="headline mb-0">Ramesh</h3>
+              <div>Located two hours south of Sydney in the <br>Southern Highlands of New South Wales, ...</div>
+            </div>
+          </v-card-title>
+          <v-card-actions>
+            <v-btn flat color="orange">Share</v-btn>
+            <v-btn flat color="orange">Details</v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-flex>
+      <v-flex xs6 sm4 md3 class="pl-2">
+        <v-card>
+          <v-card-media src="https://lh4.googleusercontent.com/-M6gI9NNnr0k/AAAAAAAAAAI/AAAAAAAAAB8/8quus1Eouio/photo.jpg" height="200px">
+          </v-card-media>
+          <v-card-title primary-title>
+            <div>
+              <h3 class="headline mb-0">Suresh</h3>
+              <div>Located two hours south of Sydney in the <br>Southern Highlands of New South Wales, ...</div>
+            </div>
+          </v-card-title>
+          <v-card-actions>
+            <v-btn flat color="orange">Share</v-btn>
+            <v-btn flat color="orange">Details</v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-flex>
+      <v-flex xs6 sm4 md3 class="pl-2">
+        <v-card>
+          <v-card-media src="https://lh4.googleusercontent.com/-M6gI9NNnr0k/AAAAAAAAAAI/AAAAAAAAAB8/8quus1Eouio/photo.jpg" height="200px">
+          </v-card-media>
+          <v-card-title primary-title>
+            <div>
+              <h3 class="headline mb-0">Sateesh</h3>
+              <div>Located two hours south of Sydney in the <br>Southern Highlands of New South Wales, ...</div>
+            </div>
+          </v-card-title>
+          <v-card-actions>
+            <v-btn flat color="orange">Share</v-btn>
+            <v-btn flat color="orange">Details</v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-flex>
+    </v-layout>
   </v-container>
 </template>
 
