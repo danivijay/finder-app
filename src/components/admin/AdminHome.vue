@@ -3,6 +3,7 @@
     <v-layout  row wrap>
       <v-flex xs12 class="mb-3">
         <v-btn
+          to="/admin/add"
           large
           color="primary"
           >Add case</v-btn>

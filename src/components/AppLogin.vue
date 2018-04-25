@@ -14,6 +14,7 @@
             required
           ></v-text-field>
           <v-btn
+            to="/admin"
             large
             color="primary"
             >Login</v-btn>

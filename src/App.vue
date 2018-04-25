@@ -3,8 +3,12 @@
     <v-toolbar
       app
     >
-      <v-toolbar-title v-text="title"></v-toolbar-title>
+      <router-link to="/" tag="v-toolbar-title" style="cursor: pointer;">{{ title }}</router-link>
       <v-spacer></v-spacer>
+      <v-btn to="/login"
+        icon>
+        <v-icon>lock_open</v-icon>
+      </v-btn>
     </v-toolbar>
     <v-content>
       <router-view/>

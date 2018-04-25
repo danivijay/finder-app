@@ -1,21 +1,23 @@
 <template>
-  <v-container>
+  <v-container elevation-1 class="mt-2">
     <v-layout  row wrap class="mb-3">
-      <v-flex xs9>
+      <v-flex xs8 md10>
             <v-text-field
               label="Search person"
             ></v-text-field>
       </v-flex>
-      <v-flex xs3>
+      <v-flex xs4 md2>
             <v-btn
             block
             large
             color="primary"
-            >Search</v-btn>
+            >
+            <v-icon left>search</v-icon>
+            Search</v-btn>
       </v-flex>
     </v-layout>
     <v-layout row wrap>
-      <v-flex xs12 sm6 md4 class="pl-2">
+      <v-flex xs12 sm6 md4 class="pl-1">
         <v-card>
           <v-card-media src="https://lh4.googleusercontent.com/-M6gI9NNnr0k/AAAAAAAAAAI/AAAAAAAAAB8/8quus1Eouio/photo.jpg" height="400px">
           </v-card-media>
@@ -28,9 +30,18 @@
           </v-card-title>
           <v-card-actions>
             <v-spacer></v-spacer>
-            <v-btn dark color="success">Share</v-btn>
-            <v-btn dark color="error">Report</v-btn>
-            <v-btn dark color="info">Details</v-btn>
+            <v-flex xs4 left>
+
+            <v-btn block dark right color="success">Share</v-btn>
+            </v-flex>
+            <v-flex xs4 center>
+            <v-btn block dark right color="error">Report</v-btn>
+
+            </v-flex>
+            <v-flex xs4 right>
+
+            <v-btn block dark right color="info">Details</v-btn>
+            </v-flex>
           </v-card-actions>
         </v-card>
       </v-flex>
