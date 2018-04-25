@@ -22,7 +22,10 @@
             <td class="text-xs-right">{{ props.item.District }}</td>
             <td class="text-xs-right">{{ props.item.Status }}</td>
             <td class="justify-center layout px-0">
-              <v-btn icon class="mx-0" @click="editItem(props.item)">
+              <v-btn icon class="mx-0">
+                <v-icon color="green">check</v-icon>
+              </v-btn>
+              <v-btn icon class="mx-0">
                 <v-icon color="teal">edit</v-icon>
               </v-btn>
               <v-btn icon class="mx-0" @click="deleteItem(props.item)">
@@ -49,11 +52,11 @@ export default {
         align: 'left',
         value: 'Id'
       },
-      { text: 'Name', value: 'Name' },
-      { text: 'Station', value: 'Station' },
-      { text: 'District', value: 'District' },
-      { text: 'Status', value: 'Status' },
-      { text: 'Actions', value: 'name', sortable: false }
+      { text: 'Name', align: 'right', value: 'Name' },
+      { text: 'Station', align: 'right', value: 'Station' },
+      { text: 'District', align: 'right', value: 'District' },
+      { text: 'Status', align: 'right', value: 'Status' },
+      { text: 'Actions', align: 'right', value: 'name', sortable: false }
     ],
     items: []
   }),
