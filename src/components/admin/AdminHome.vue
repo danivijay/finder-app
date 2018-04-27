@@ -1,5 +1,20 @@
 <template>
   <v-container>
+    <v-layout  row wrap class="mb-3">
+      <v-flex xs8 md10>
+            <v-text-field
+              label="Search person"
+            ></v-text-field>
+      </v-flex>
+      <v-flex xs4 md2>
+            <v-btn
+            block
+            large
+            color="primary"
+            >
+            Search</v-btn>
+      </v-flex>
+    </v-layout>
     <v-layout  row wrap>
       <v-flex xs12 class="mb-3">
         <v-btn
@@ -8,6 +23,8 @@
           color="primary"
           >Add case</v-btn>
       </v-flex>
+    </v-layout>
+    <v-layout  row wrap>
       <v-flex xs12>
 
         <v-data-table
