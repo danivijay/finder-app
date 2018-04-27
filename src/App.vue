@@ -14,7 +14,7 @@
       <router-view/>
     </v-content>
     <v-footer app>
-      <span>&copy; 2018 | finder-app</span>
+      <span>&copy; 2018</span>
     </v-footer>
   </v-app>
 </template>
@@ -23,7 +23,7 @@
 export default {
   data () {
     return {
-      title: 'Finder App'
+      title: 'Missing Person Verifier'
     }
   },
   name: 'App'
