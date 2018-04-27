@@ -21,6 +21,7 @@
                   large
                   color="success"
                   block
+                  @click.stop="sharePop = true"
                   >Share</v-btn>
               </v-flex>
               <v-flex xs12 sm7>
@@ -40,6 +41,7 @@
                   flat
                   small
                   color="error"
+                  @click.stop="reportPop = true"
                   >Report now</v-btn>
               </v-flex>
             </v-layout>
@@ -49,11 +51,95 @@
 
       </v-flex>
     </v-layout>
+
+    <v-dialog
+        v-model="sharePop"
+        fullscreen
+        hide-overlay
+        transition="dialog-bottom-transition"
+        scrollable
+      >
+        <v-card tile>
+          <v-toolbar card dark color="success">
+            <v-btn icon @click.native="sharePop = false" dark>
+              <v-icon>close</v-icon>
+            </v-btn>
+            <v-toolbar-title>Share to</v-toolbar-title>
+          </v-toolbar>
+          <v-card-text>
+            <p>*Missing Person Alert*</p>
+            <p>കൊച്ചി വിപിനടുത്തുവച്ചു ജോൺ ഡോ എന്നയാളെ കാണാതായിട്ടുണ്ട്. ബ്ലൂ ജീൻസും റെഡ് ഷർട്ട് ഉം ആണ് വേഷം. ഇയാളെ കാണുകയാണെങ്കിൽ ഉടനെ പോലീസ് സ്റ്റേഷനിൽ ബന്ധപ്പെടുക.</p>
+            <p>കേസ് ഐ ഡി: 1247854</p>
+            <p>വിശദവിവരങ്ങൾ: https://missingpersonverifier.gov.in/1247854</p>
+            <p>മുകളിൽ കൊടുത്ത വെബ്പേജ്  സന്ദർശിച് വിവരങ്ങൾ യാഥാർഥ്യവും ഇപ്പോഴും നിലവിലുള്ളതാണോ എന്നും ഉറപ്പുവരുത്തുക.</p>
+            <p>Please visit the webpage mentioned above to ensure the credibility and validity of details."</p>
+            <v-btn
+              large
+              color="success"
+              >WhatsApp</v-btn>
+            <v-btn
+              large
+              color="primary"
+              >Facebook</v-btn>
+            <v-btn
+              large
+              color="default"
+              >Copy message</v-btn>
+          </v-card-text>
+          <div style="flex: 1 1 auto;"></div>
+        </v-card>
+      </v-dialog>
+
+      <v-dialog
+        v-model="reportPop"
+        fullscreen
+        hide-overlay
+        transition="dialog-bottom-transition"
+        scrollable
+      >
+        <v-card tile>
+          <v-toolbar card dark color="error">
+            <v-btn icon @click.native="reportPop = false" dark>
+              <v-icon>close</v-icon>
+            </v-btn>
+            <v-toolbar-title>Report now</v-toolbar-title>
+          </v-toolbar>
+          <v-card-text>
+            <v-alert type="warning" :value="true">
+              We may contact you for detailed information.
+            </v-alert>
+            <v-text-field
+              label="Message"
+              multi-line
+              type="text"
+              ></v-text-field>
+            <v-text-field
+              type="file"
+              ></v-text-field>
+            <v-text-field
+              label="Your contact number"
+              type="text"
+              ></v-text-field>
+            <v-btn
+              large
+              color="primary"
+              >Submit</v-btn>
+          </v-card-text>
+          <div style="flex: 1 1 auto;"></div>
+        </v-card>
+      </v-dialog>
+
   </v-container>
 </template>
 
 <script>
 export default {
+  data () {
+    return {
+      sharePop: false,
+      reportPop: false
+    }
+  },
   computed: {
     dateAndTime () {
       let d = new Date()
