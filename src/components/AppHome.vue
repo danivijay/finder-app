@@ -17,33 +17,36 @@
       </v-flex>
     </v-layout>
     <v-layout row wrap>
-      <v-flex xs12 sm6 md4 class="pl-1">
+      <v-flex xs12 sm6 md4>
         <v-card>
-          <v-card-media src="https://lh4.googleusercontent.com/-M6gI9NNnr0k/AAAAAAAAAAI/AAAAAAAAAB8/8quus1Eouio/photo.jpg" height="400px">
-          </v-card-media>
-          <v-card-title primary-title>
-            <div>
-              <h3 class="headline mb-0">John Doe</h3>
-              <h4>ID: 1247854</h4>
-              <div>Missing from Vytila, Kochi from 20-10-2017</div>
-            </div>
-          </v-card-title>
+
+          <v-container fluid grid-list-lg>
+            <v-layout row>
+              <v-flex xs7>
+                  <div>
+                    <h3 class="headline mb-0">John Doe</h3>
+                    <h4>ID: 1247854</h4>
+                    <div>Missing from 20-10-2017</div>
+                  </div>
+              </v-flex>
+              <v-flex xs5>
+                <v-card-media
+                    src="https://firebasestorage.googleapis.com/v0/b/finder-app-ed8f0.appspot.com/o/2.png?alt=media&token=ceb12c81-cf94-4f7d-b5ca-3cd410907ecf"
+                    height="125px"
+                    contain
+                  ></v-card-media>
+              </v-flex>
+            </v-layout>
+          </v-container>
+
           <v-card-actions>
             <v-spacer></v-spacer>
-            <v-flex xs4 left>
-
-            <v-btn block dark right color="success">Share</v-btn>
-            </v-flex>
-            <v-flex xs4 center>
-            <v-btn block dark right color="error">Report</v-btn>
-
-            </v-flex>
-            <v-flex xs4 right>
-
-            <v-btn block dark right color="info">Details</v-btn>
-            </v-flex>
+            <v-btn flat dark left color="success">Share</v-btn>
+            <v-btn flat dark center color="error">Report</v-btn>
+            <v-btn flat dark right color="info" to="/case/1">Details</v-btn>
           </v-card-actions>
         </v-card>
+
       </v-flex>
     </v-layout>
   </v-container>

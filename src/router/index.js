@@ -4,6 +4,7 @@ import AppHome from '@/components/AppHome'
 import AppLogin from '@/components/AppLogin'
 import AdminHome from '@/components/admin/AdminHome'
 import AdminAdd from '@/components/admin/AdminAdd'
+import AppDetails from '@/components/AppDetails'
 
 Vue.use(Router)
 
@@ -28,6 +29,11 @@ export default new Router({
       path: '/admin/add',
       name: 'AdminAdd',
       component: AdminAdd
+    },
+    {
+      path: '/case/:id',
+      name: 'AppDetails',
+      component: AppDetails
     }
   ]
 })
